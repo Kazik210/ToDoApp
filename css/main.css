@@ -7,7 +7,36 @@
 body {
     font-family: 'Lato', sans-serif;
     background: #333333;
-    color: #E0E0E0;
+    color: #e0e0e0;
 }
 
 /* Main Header */
+.main-header {
+    width: 100%;
+}
+
+.main-header__heading {
+    margin: .8rem 0 0 1.2rem;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+}
+
+.main-header__date {
+    width: 65%;
+    text-align: center;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.date__day {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: .4rem;
+}
+
+.date__callendar-date {
+    padding-bottom: .3rem;
+    font-style: italic;
+}
