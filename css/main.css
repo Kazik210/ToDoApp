@@ -30,13 +30,13 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.date__day {
+.main-header__day {
     text-transform: uppercase;
     font-size: 1.8rem;
     margin-bottom: .4rem;
 }
 
-.date__callendar-date {
+.main-header__callendar-date {
     padding-bottom: .3rem;
     font-style: italic;
 }
