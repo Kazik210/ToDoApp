@@ -19,6 +19,7 @@ body {
     margin: .8rem 0 0 1.2rem;
     letter-spacing: 1px;
     /* text-transform: uppercase; */
+    color: lightblue;
 }
 
 .main-header__date {
@@ -28,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #e0e0e0;
+    border-color: lightblue;
 }
 
 .main-header__day {
@@ -40,3 +42,60 @@ body {
     padding-bottom: .3rem;
     font-style: italic;
 }
+
+/* Add Task Section */
+.add-task {
+    width: 90%;
+    margin: 2rem auto 0;
+}
+
+.add-task__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-task__input {
+    border: none;
+    outline: none;
+    background: inherit;
+    margin-bottom: 1.6rem;
+    border-bottom: 1px solid #e0e0e0;
+    color: #e0e0e0;
+    padding: .8rem;
+    transition: .5s ease;
+}
+
+.add-task__input:hover,
+.add-task__input:focus,
+.add-task__input:active {
+    border-color: lightblue;
+    color: lightblue;
+}
+
+.add-task__button {
+    width: 120px;
+    padding: .6rem 1rem;
+    border: none;
+    background: lightblue;
+    opacity: .6;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.add-task__button:hover,
+.add-task__button:focus,
+.add-task__button:active {
+    opacity: 1;
+}
+
+/* .line {
+    margin-top: 3rem;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+} */
