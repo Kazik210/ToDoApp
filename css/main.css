@@ -23,7 +23,7 @@ body {
 }
 
 .main-header__date {
-    width: 65%;
+    width: 60%;
     text-align: center;
     margin: 2rem auto 0;
     display: flex;
@@ -149,4 +149,62 @@ body {
 .task-wrapper__element > i:focus,
 .task-wrapper__element > i:active {
     opacity: 1;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 650px) {
+    .main-header__heading {
+        margin: 1.4rem 0 0 2rem;
+    }
+
+    .main-header__date {
+        width: 50%;
+    }
+
+    .add-task__form {
+        flex-direction: row;
+        margin-top: 4rem;
+    }
+
+    .add-task__input {
+        flex: 1;
+    }
+
+    .add-task__button {
+        flex: 1;
+        /* justify-self: center; */
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .add-task {
+        width: 70%;
+    }
+
+    .filter-list__input {
+        margin-left: 13rem;
+    }
+
+    .task-wrapper {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .main-header__date {
+        width: 40%;
+    }
+
+    .add-task {
+        width: 50%;
+    }
+
+    .filter-list__input {
+        margin-left: 23rem;
+    }
+
+    .task-wrapper {
+        width: 50%;
+    }
 }
