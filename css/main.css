@@ -116,6 +116,12 @@ body {
     color: #e0e0e0
 }
 
+.filter-list__input:hover,
+.filter-list__input:focus,
+.filter-list__input:active {
+    border-color: lightblue;
+}
+
 .task-wrapper {
     width: 90%;
     margin: 2.8rem auto 0;
