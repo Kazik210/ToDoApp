@@ -2,7 +2,6 @@
 const taskInput_input = document.querySelector('.add-task__input');
 const addTask_button = document.querySelector('.add-task__button');
 const taskList_div = document.querySelector('.task-wrapper');
-const task_p = document.querySelector('.task-wrapper__task');
 
 // Create task element
 function createElement(task) {
@@ -12,7 +11,6 @@ function createElement(task) {
 
     // Create p
     const p = document.createElement('p');
-    p.classList.add('task-wrapper__task');
     p.innerHTML = task;
 
     // Create i
@@ -59,3 +57,5 @@ taskList_div.addEventListener('click', e => {
 
     e.preventDefault();
 });
+
+// Filter Elements
