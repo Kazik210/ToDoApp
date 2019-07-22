@@ -2,6 +2,7 @@
 const taskInput_input = document.querySelector('.add-task__input');
 const addTask_button = document.querySelector('.add-task__button');
 const taskList_div = document.querySelector('.task-wrapper');
+const filter_input = document.querySelector('.filter-list__input');
 
 // Create task element
 function createElement(task) {
@@ -25,6 +26,9 @@ function createElement(task) {
     return div;
 }
 
+//Empty task list
+taskList_div.innerHTML = '';
+
 // Button event
 addTask_button.addEventListener('click', e => {
     if (taskInput_input.value !== '') {
@@ -32,6 +36,7 @@ addTask_button.addEventListener('click', e => {
 
         // Create task element
         const taskElement = createElement(task);
+        taskElement.style.display = 'flex';
 
         // Append task inside list
         taskList_div.appendChild(taskElement);
@@ -59,3 +64,29 @@ taskList_div.addEventListener('click', e => {
 });
 
 // Filter Elements
+filter_input.addEventListener('keyup', e => {
+    const filter = filter_input.value;
+    // console.log(filter);
+    // console.log(taskList_div.childNodes);
+
+    // Get array of task list children
+    const taskArr = Array.from(taskList_div.childNodes);
+    console.log(taskArr);
+
+    // If Arr is not empty
+    if (taskArr.length >= 1) {
+        // Filter elements
+        taskArr.forEach(e => {
+            // console.log(e.firstChild.innerHTML);
+            // console.log(e);
+            if (!e.firstChild.innerHTML.includes(filter)) {
+                e.style.display = 'none';
+            }
+            else {
+                e.style.display = 'flex';
+            }
+        });
+    }
+
+    e.preventDefault();
+});
