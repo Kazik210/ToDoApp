@@ -1,7 +1,8 @@
 // DOM Variables
-const task_input = document.querySelector('.add-task__input');
+const taskInput_input = document.querySelector('.add-task__input');
 const addTask_button = document.querySelector('.add-task__button');
 const taskList_div = document.querySelector('.task-wrapper');
+const task_p = document.querySelector('.task-wrapper__task');
 
 // Create task element
 function createElement(task) {
@@ -11,6 +12,7 @@ function createElement(task) {
 
     // Create p
     const p = document.createElement('p');
+    p.classList.add('task-wrapper__task');
     p.innerHTML = task;
 
     // Create i
@@ -27,8 +29,8 @@ function createElement(task) {
 
 // Button event
 addTask_button.addEventListener('click', e => {
-    if (task_input.value !== '') {
-        const task = task_input.value;
+    if (taskInput_input.value !== '') {
+        const task = taskInput_input.value;
 
         // Create task element
         const taskElement = createElement(task);
@@ -37,7 +39,22 @@ addTask_button.addEventListener('click', e => {
         taskList_div.appendChild(taskElement);
 
         // Empty task imput
-        task_input.value = '';
+        taskInput_input.value = '';
+    }
+
+    e.preventDefault();
+});
+
+// Delete task
+taskList_div.addEventListener('click', e => {
+    if (e.target.className.includes('fas')) {
+        // If task is not crossed
+        if (e.target.previousSibling.style.textDecoration === '') {
+            e.target.previousSibling.style.textDecoration = 'line-through';
+        }
+        else {
+            e.target.parentElement.remove();
+        }
     }
 
     e.preventDefault();

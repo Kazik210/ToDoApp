@@ -133,6 +133,10 @@ body {
     border-radius: 10px;
 }
 
+.task-wrapper__task {
+    text-decoration: none;
+}
+
 .task-wrapper__element > i {
     cursor: pointer;
     opacity: .7;
