@@ -99,3 +99,33 @@ body {
     width: 100%;
     border-bottom: 1px solid #e0e0e0;
 } */
+
+/* Main */
+.task-wrapper {
+    width: 90%;
+    margin: 4rem auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-wrapper__element {
+    display: flex;
+    padding: .5rem 2rem;
+    justify-content: space-between;
+    background: #e0e0e0;
+    color: #000;
+    margin-bottom: 1.3rem;
+    border-radius: 10px;
+}
+
+.task-wrapper__element > i {
+    cursor: pointer;
+    opacity: .7;
+    transition: .5s ease;
+}
+
+.task-wrapper__element > i:hover,
+.task-wrapper__element > i:focus,
+.task-wrapper__element > i:active {
+    opacity: 1;
+}
